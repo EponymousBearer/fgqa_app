@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import ScreenBtn from "../../jobdetails/buttons/ScreenBtn";
+import ScreenBtn from "../../sub_components/header/ScreenHeaderBtn";
 import styles from "./report.style";
 import { COLORS, SIZES, images } from "../../../constants";
 
@@ -16,6 +16,7 @@ const TitleWithImage = ({ title, tag, imageSource }) => {
         <Text style={{ fontSize: 16, fontWeight: 'bold', marginTop: 50 }}>{title}</Text>
         <Text style={{ fontSize: 12, fontWeight: 'normal' }}>{tag}</Text>
       </View>
+      
       <Image source={imageSource} style={{ margin: 10, marginRight: 20, marginTop: 60 }} />
     </View>
   );
@@ -66,7 +67,7 @@ const Admin_report = () => {
           <Count number={90} title={"Closed"} color="green" />
         </View>
         <View style={styles.buttonContainer}>
-          <ScreenBtn />
+          <ScreenBtn text={"Export"} bgcolor={COLORS.defaultbtn} textcolor={COLORS.white}/>
         </View>
 
       </View>
